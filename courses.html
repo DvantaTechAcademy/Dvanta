@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses | DVANTA IT Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+        }
+
+        header {
+            background: #101820;
+            color: white;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .page-hero {
+            background: linear-gradient(to right, #0b2d4d, #144d75);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .page-hero h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .course-box {
+            max-width: 1000px;
+            margin: auto;
+            background: #f7f9fb;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+        }
+
+        .course-box h3 {
+            color: #0f4c81;
+            margin-top: 0;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .module {
+            background: white;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+        }
+
+        .highlight {
+            background: #eef4fa;
+            padding: 20px;
+            border-left: 5px solid #ff6b00;
+            margin-top: 30px;
+            font-size: 16px;
+        }
+
+        footer {
+            background: #0a0f14;
+            color: #bbb;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>DVANTA IT Academy</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h2>Industry-Focused IT Programs</h2>
+    <p>
+        Learn directly from an architect with 15+ years of experience.
+        Our courses are designed to build confidence, thinking ability,
+        and real production-level skills.
+    </p>
+</section>
+
+<section>
+    <h2 class="section-title">Our Professional Courses</h2>
+
+    <!-- JAVA FULL STACK -->
+    <div class="course-box">
+        <h3>Java Full Stack Development</h3>
+        <p>
+            A complete end-to-end program focused on how enterprise
+            Java applications are designed, built, tested, and deployed.
+        </p>
+
+        <div class="course-grid">
+            <div class="module">Core Java & OOP Concepts</div>
+            <div class="module">Advanced Java & Collections</div>
+            <div class="module">Spring & Spring Boot</div>
+            <div class="module">REST APIs & Microservices Basics</div>
+            <div class="module">Database Design (SQL)</div>
+            <div class="module">Frontend (HTML, CSS, JavaScript, React)</div>
+            <div class="module">Git, Code Review & Best Practices</div>
+            <div class="module">Live Enterprise-Style Project</div>
+        </div>
+
+        <div class="highlight">
+            <strong>Outcome:</strong> Ready for Junior Java Developer /
+            Backend Developer roles with real-world confidence.
+        </div>
+    </div>
+
+    <!-- PYTHON & DATA -->
+    <div class="course-box">
+        <h3>Python & Data Science</h3>
+        <p>
+            Learn Python the way industry uses it — not just syntax,
+            but problem solving, data handling, and analytics thinking.
+        </p>
+
+        <div class="course-grid">
+            <div class="module">Python Fundamentals & Logic Building</div>
+            <div class="module">NumPy & Pandas</div>
+            <div class="module">Data Cleaning & Processing</div>
+            <div class="module">Exploratory Data Analysis</div>
+            <div class="module">Machine Learning Basics</div>
+            <div class="module">Real Data Projects</div>
+        </div>
+
+        <div class="highlight">
+            <strong>Outcome:</strong> Entry-level Data Analyst /
+            Python Developer readiness.
+        </div>
+    </div>
+
+    <!-- WEB DEV -->
+    <div class="course-box">
+        <h3>Web Development (Frontend Focus)</h3>
+        <p>
+            Build modern, responsive, and performance-optimized
+            websites using industry-standard tools.
+        </p>
+
+        <div class="course-grid">
+            <div class="module">HTML5 & CSS3</div>
+            <div class="module">Responsive Design</div>
+            <div class="module">JavaScript Fundamentals</div>
+            <div class="module">React Basics</div>
+            <div class="module">UI Performance & Optimization</div>
+            <div class="module">Real Website Projects</div>
+        </div>
+
+        <div class="highlight">
+            <strong>Outcome:</strong> Frontend Developer /
+            Web Designer readiness.
+        </div>
+    </div>
+
+    <!-- AI ML -->
+    <div class="course-box">
+        <h3>AI / ML Foundation Program</h3>
+        <p>
+            Designed for beginners who want to understand
+            AI/ML concepts clearly before advanced specialization.
+        </p>
+
+        <div class="course-grid">
+            <div class="module">AI & ML Fundamentals</div>
+            <div class="module">Supervised & Unsupervised Learning</div>
+            <div class="module">Model Training Concepts</div>
+            <div class="module">Use-Case-Driven Learning</div>
+            <div class="module">Mini AI Projects</div>
+        </div>
+
+        <div class="highlight">
+            <strong>Outcome:</strong> Strong foundation for AI/ML
+            learning & future specialization.
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2025 DVANTA IT Academy. All rights reserved.
+</footer>
+
+</body>
+</html>

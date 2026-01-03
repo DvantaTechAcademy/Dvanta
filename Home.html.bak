@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DVANTA IT Academy | Industry Ready IT Training</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+        }
+
+        header {
+            background: #101820;
+            color: white;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #0f4c81, #1b6ca8);
+            color: white;
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #ff6b00;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .course-grid {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .course-box {
+            width: 280px;
+            background: #f7f7f7;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+
+        .course-box h3 {
+            margin-top: 0;
+            color: #0f4c81;
+        }
+
+        .why {
+            background: #f0f4f8;
+            text-align: center;
+        }
+
+        .why p {
+            max-width: 900px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 200px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        }
+
+        .stat-box h3 {
+            margin: 0;
+            font-size: 30px;
+            color: #ff6b00;
+        }
+
+        .contact {
+            background: #101820;
+            color: white;
+            text-align: center;
+        }
+
+        footer {
+            background: #0a0f14;
+            color: #bbb;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>DVANTA IT Academy</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+<section class="hero" style="
+    background: linear-gradient(to right, #0b2d4d, #144d75);
+    color: white;
+    padding: 110px 20px;
+    text-align: center;
+">
+    <h2 style="font-size:42px; margin-bottom:15px;">
+        Learn with an Architect.<br>
+        Build Industry-Ready Confidence.
+    </h2>
+
+    <p style="
+        font-size:18px;
+        max-width:850px;
+        margin:auto;
+        line-height:1.6;
+    ">
+        Get trained directly by a software architect with
+        <strong>15+ years of real IT industry experience</strong>.
+        Learn how enterprise applications are designed, built,
+        reviewed, optimized, and delivered in production.
+    </p>
+
+    <p style="margin-top:20px; font-size:16px;">
+        Not just coding — <strong>architecture, mindset, best practices & real projects</strong>.
+    </p>
+
+    <a href="#courses" class="btn" style="margin-top:30px;">
+        Start Your IT Journey
+    </a>
+</section>
+
+
+<section>
+    <h2 class="section-title">Courses We Offer</h2>
+
+    <div class="course-grid">
+        <div class="course-box">
+            <h3>Java Full Stack</h3>
+            <p>Core Java, Spring Boot, REST APIs, SQL, React, live projects.</p>
+        </div>
+
+        <div class="course-box">
+            <h3>Python & Data Science</h3>
+            <p>Python, NumPy, Pandas, Machine Learning & analytics projects.</p>
+        </div>
+
+        <div class="course-box">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript, React & modern UI development.</p>
+        </div>
+
+        <div class="course-box">
+            <h3>AI / ML Foundation</h3>
+            <p>AI basics, ML models, real-world use cases & hands-on labs.</p>
+        </div>
+    </div>
+</section>
+<section style="background:#f8fbff; padding:60px 20px;">
+    <h2 class="section-title">Student Learning Roadmap</h2>
+    <p style="text-align:center; max-width:900px; margin:auto; font-size:17px;">
+        Our roadmap is designed to convert beginners into confident,
+        industry-ready junior developers through structured phases.
+    </p>
+
+    <div class="course-grid" style="margin-top:40px;">
+
+        <div class="course-box">
+            <h3>Phase 1: Industry Orientation</h3>
+            <p><strong>Duration:</strong> 1 Week</p>
+            <p>
+                Understand how real software companies work,
+                tools used in production, roles, workflows,
+                and expectations from developers.
+            </p>
+        </div>
+
+        <div class="course-box">
+            <h3>Phase 2: Core Skill Building</h3>
+            <p><strong>Duration:</strong> 1–5 Months</p>
+            <p>
+                Deep understanding of backend, frontend,
+                databases, Git, code reviews, optimization,
+                and real-world architecture concepts.
+            </p>
+        </div>
+
+        <div class="course-box">
+            <h3>Phase 3: Live Project Onboarding</h3>
+            <p><strong>Duration:</strong> 6–9 Months</p>
+            <p>
+                Work on real projects like production teams,
+                follow Agile practices, write clean code,
+                and handle real business use cases.
+            </p>
+        </div>
+
+        <div class="course-box">
+            <h3>Phase 4: Internship Experience</h3>
+            <p><strong>Duration:</strong> 1–3 Months</p>
+            <p>
+                Internship with DVANTA or partner companies,
+                exposure to deadlines, teamwork,
+                and client-level expectations.
+            </p>
+        </div>
+
+        <div class="course-box">
+            <h3>Phase 5: Junior Developer Prep</h3>
+            <p>
+                Hands-on bug fixing, feature development,
+                performance improvement, and deployment basics.
+            </p>
+        </div>
+
+        <div class="course-box">
+            <h3>Phase 6: Interview & Placement Support</h3>
+            <p>
+                Resume building, mock interviews,
+                real interview questions,
+                and job-referral assistance.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="why">
+    <h2 class="section-title">Why DVANTA IT Academy?</h2>
+    <p>
+        We focus on skill-based learning, not just theory.
+        Our programs are designed to bridge the gap between
+        college education and IT industry expectations.
+    </p>
+
+    <div class="stats">
+        <div class="stat-box">
+            <h3>100+</h3>
+            <p>Students Trained</p>
+        </div>
+        <div class="stat-box">
+            <h3>15+</h3>
+            <p>Live Projects</p>
+        </div>
+        <div class="stat-box">
+            <h3>1:1</h3>
+            <p>Mentorship</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p>📍 Indore | MP</p>
+    <p>📞 +91-XXXXXXXXXX</p>
+    <p>📧 info@dvantaitacademy.com</p>
+</section>
+
+<footer>
+    © 2025 DVANTA IT Academy. All rights reserved.
+</footer>
+
+</body>
+</html>
