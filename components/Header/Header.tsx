@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -97,37 +97,40 @@ const Header: React.FC = () => {
           }}
         >
           <Container maxWidth="xl">
-            <Toolbar sx={{ justifyContent: 'space-between', py: 1 }}>
-              <Link href="/" passHref legacyBehavior>
-                <Box
-                  component="a"
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    textDecoration: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
+            <Toolbar disableGutters sx={{ minHeight: { xs: 72, md: 95 }, py: { xs: 1, md: 1.5 } }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', flex: { xs: 1, md: 0 }, mr: { xs: 1, md: 4 } }}>
+                <Link href="/" passHref legacyBehavior>
                   <Box
+                    component="a"
                     sx={{
-                      width: 80,
-                      height: 80,
                       display: 'flex',
                       alignItems: 'center',
-                      justifyContent: 'center',
-                      backgroundColor: 'primary.main',
-                      borderRadius: 2,
-                      color: 'white',
-                      fontWeight: 700,
-                      fontSize: '1.5rem',
+                      textDecoration: 'none',
+                      cursor: 'pointer',
                     }}
                   >
-                    DVANTA
+                    <Box
+                      component="img"
+                      src="/logo.png"
+                      alt="DVANTA IT Academy"
+                      sx={{
+                        height: { xs: 72, md: 88 },
+                        width: 'auto',
+                        objectFit: 'contain',
+                        maxWidth: { xs: 250, md: 300 },
+                      }}
+                    />
                   </Box>
-                </Box>
-              </Link>
+                </Link>
+              </Box>
 
-              <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 2 }}>
+              <Box sx={{ 
+                display: { xs: 'none', md: 'flex' }, 
+                alignItems: 'center', 
+                gap: 0.5,
+                flex: 1,
+                justifyContent: 'center',
+              }}>
                 {navItems.map((item) => {
                   if (item.submenu) {
                     return (
@@ -137,9 +140,12 @@ const Header: React.FC = () => {
                           sx={{
                             color: pathname.startsWith(item.path) ? 'secondary.main' : 'text.primary',
                             fontWeight: 500,
-                            fontSize: '0.95rem',
+                            fontSize: '0.9rem',
                             fontFamily: 'var(--font-poppins)',
                             textTransform: 'none',
+                            px: 1.5,
+                            py: 0.5,
+                            minWidth: 'auto',
                             '&:hover': { 
                               backgroundColor: 'rgba(255, 107, 0, 0.08)',
                               color: 'secondary.main',
@@ -179,9 +185,12 @@ const Header: React.FC = () => {
                         sx={{
                           color: pathname === item.path ? 'secondary.main' : 'text.primary',
                           fontWeight: 500,
-                          fontSize: '0.95rem',
+                          fontSize: '0.9rem',
                           fontFamily: 'var(--font-poppins)',
                           textTransform: 'none',
+                          px: 1.5,
+                          py: 0.5,
+                          minWidth: 'auto',
                           position: 'relative',
                           '&::after': pathname === item.path ? {
                             content: '""',
@@ -204,12 +213,29 @@ const Header: React.FC = () => {
                     </Link>
                   );
                 })}
+              </Box>
+
+              <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', ml: 2 }}>
                 <Link href="/contact" passHref legacyBehavior>
                   <Button
                     component="a"
                     variant="contained"
                     color="secondary"
-                    sx={{ ml: 1 }}
+                    sx={{ 
+                      px: 2.5,
+                      py: 0.75,
+                      fontSize: '0.9rem',
+                      fontWeight: 600,
+                      fontFamily: 'var(--font-poppins)',
+                      textTransform: 'none',
+                      borderRadius: 2,
+                      boxShadow: '0 2px 8px rgba(255, 107, 0, 0.3)',
+                      '&:hover': {
+                        boxShadow: '0 4px 12px rgba(255, 107, 0, 0.4)',
+                        transform: 'translateY(-1px)',
+                      },
+                      transition: 'all 0.3s ease',
+                    }}
                   >
                     Enquire Now
                   </Button>
@@ -219,9 +245,9 @@ const Header: React.FC = () => {
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
-                edge="start"
+                edge="end"
                 onClick={handleDrawerToggle}
-                sx={{ display: { md: 'none' } }}
+                sx={{ display: { md: 'none' }, ml: 'auto' }}
               >
                 <MenuIcon />
               </IconButton>
@@ -249,4 +275,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-

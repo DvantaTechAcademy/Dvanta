@@ -1,12 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Box, Container, Typography, Grid } from '@mui/material';
 import CourseCard from '../CourseCard/CourseCard';
 import { courses } from '@/data/courses';
 
@@ -21,55 +16,21 @@ const CourseCarousel: React.FC = () => {
             mb: 6,
             fontWeight: 700,
             color: 'primary.main',
+            fontFamily: 'var(--font-poppins)',
           }}
         >
           Courses We Offer
         </Typography>
-        <Box sx={{ 
-          '& .swiper-slide': {
-            height: 'auto',
-            display: 'flex',
-          },
-          '& .swiper-wrapper': {
-            display: 'flex',
-            alignItems: 'stretch',
-          },
-        }}>
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={30}
-            slidesPerView={1}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-              },
-              960: {
-                slidesPerView: 3,
-              },
-              1280: {
-                slidesPerView: 4,
-              },
-            }}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            loop
-            style={{ paddingBottom: '50px' }}
-          >
-            {courses.map((course, index) => (
-              <SwiperSlide key={course.id} style={{ height: 'auto' }}>
-                <CourseCard course={course} index={index} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </Box>
+        <Grid container spacing={4}>
+          {courses.map((course, index) => (
+            <Grid item xs={12} sm={6} md={4} key={course.id}>
+              <CourseCard course={course} index={index} />
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </Box>
   );
 };
 
 export default CourseCarousel;
-

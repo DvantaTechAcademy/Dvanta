@@ -58,7 +58,7 @@ export default function ContactPage() {
           from_email: formData.email,
           phone: formData.phone || 'Not provided',
           message: formData.message,
-          to: 'ankitpandey90095@gmail.com',
+          to: 'info@dvanta.com',
         }),
       });
 
@@ -161,7 +161,7 @@ export default function ContactPage() {
                         Email
                       </Typography>
                       <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'var(--font-inter)' }}>
-                        ankitpandey90095@gmail.com
+                        info@dvanta.com
                       </Typography>
                     </Box>
                   </Box>

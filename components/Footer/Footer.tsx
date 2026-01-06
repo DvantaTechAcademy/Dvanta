@@ -11,9 +11,8 @@ import {
   Divider,
 } from '@mui/material';
 import {
-  Facebook,
-  Twitter,
   LinkedIn,
+  Instagram,
   Email,
   Phone,
   LocationOn,
@@ -244,7 +243,7 @@ const Footer: React.FC = () => {
                       fontSize: '0.95rem',
                     }}
                   >
-                    +91-XXXXXXXXXX
+                    +91 98765 43210
                   </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
@@ -262,35 +261,54 @@ const Footer: React.FC = () => {
                       fontSize: '0.95rem',
                     }}
                   >
-                    info@dvantaitacademy.com
+                    info@dvanta.com
                   </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', gap: 1.5, mt: 1 }}>
-                  {[
-                    { Icon: Facebook, name: 'Facebook' },
-                    { Icon: Twitter, name: 'Twitter' },
-                    { Icon: LinkedIn, name: 'LinkedIn' },
-                  ].map(({ Icon, name }) => (
-                    <IconButton
-                      key={name}
-                      sx={{
-                        color: '#bbb',
-                        border: '1px solid rgba(255, 255, 255, 0.1)',
-                        width: 40,
-                        height: 40,
-                        transition: 'all 0.3s ease',
-                        '&:hover': {
-                          color: '#fff',
-                          backgroundColor: '#ff6b00',
-                          borderColor: '#ff6b00',
-                          transform: 'translateY(-2px)',
-                          boxShadow: '0 4px 12px rgba(255, 107, 0, 0.3)',
-                        },
-                      }}
-                    >
-                      <Icon fontSize="small" />
-                    </IconButton>
-                  ))}
+                  <IconButton
+                    component="a"
+                    href="https://www.linkedin.com/company/dvantatechacademy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: '#bbb',
+                      border: '1px solid rgba(255, 255, 255, 0.1)',
+                      width: 40,
+                      height: 40,
+                      transition: 'all 0.3s ease',
+                      '&:hover': {
+                        color: '#fff',
+                        backgroundColor: '#ff6b00',
+                        borderColor: '#ff6b00',
+                        transform: 'translateY(-2px)',
+                        boxShadow: '0 4px 12px rgba(255, 107, 0, 0.3)',
+                      },
+                    }}
+                  >
+                    <LinkedIn fontSize="small" />
+                  </IconButton>
+                  <IconButton
+                    component="a"
+                    href="https://www.instagram.com/dvantatech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: '#bbb',
+                      border: '1px solid rgba(255, 255, 255, 0.1)',
+                      width: 40,
+                      height: 40,
+                      transition: 'all 0.3s ease',
+                      '&:hover': {
+                        color: '#fff',
+                        backgroundColor: '#ff6b00',
+                        borderColor: '#ff6b00',
+                        transform: 'translateY(-2px)',
+                        boxShadow: '0 4px 12px rgba(255, 107, 0, 0.3)',
+                      },
+                    }}
+                  >
+                    <Instagram fontSize="small" />
+                  </IconButton>
                 </Box>
               </Box>
             </motion.div>
