@@ -110,3 +110,4 @@ export const internshipCompletion = {
   support: 'Interview readiness guidance',
 };
 
+
