@@ -83,7 +83,7 @@ const WhySection: React.FC = () => {
                 transition={{ duration: 0.6, ease: 'easeOut' }}
                 style={{ display: 'inline-block' }}
               >
-                Why DVANTA IT Academy?
+                Why DVANTA Infotech?
               </motion.span>
             </Typography>
           </motion.div>
@@ -203,7 +203,7 @@ const WhySection: React.FC = () => {
                 >
                   From beginner to confident junior developer in 9–12 months.
                   <br />
-                  <Box component="span" sx={{ fontWeight: 600, color: '#ff6b00' }}>
+                  <Box component="span" sx={{ fontWeight: 600, color: '#00C853' }}>
                     Learn from an Architect. Build real skills. Grow with confidence.
                   </Box>
                 </Typography>
@@ -217,5 +217,6 @@ const WhySection: React.FC = () => {
 };
 
 export default WhySection;
+
 
 

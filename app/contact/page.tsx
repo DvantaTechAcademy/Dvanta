@@ -86,14 +86,58 @@ export default function ContactPage() {
   return (
     <>
       <Header />
+      {/* Hero Section */}
       <Box
         sx={{
-          background: 'linear-gradient(135deg, #0b2d4d 0%, #144d75 100%)',
-          color: 'white',
-          py: { xs: 4, md: 6 },
+          position: 'relative',
+          width: '100%',
+          height: { xs: '50vh', md: '60vh' },
+          minHeight: '400px',
+          maxHeight: '600px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          overflow: 'hidden',
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundImage: 'url("https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=1080&fit=crop&q=80")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            zIndex: 0,
+          },
+          '&::after': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'linear-gradient(180deg, rgba(11, 45, 77, 0.75) 0%, rgba(11, 45, 77, 0.65) 50%, rgba(11, 45, 77, 0.8) 100%)',
+            zIndex: 1,
+          },
         }}
       >
-        <Container maxWidth="lg">
+        {/* Glassy overlay effect */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(11, 45, 77, 0.15)',
+            backdropFilter: 'blur(1px)',
+            zIndex: 2,
+          }}
+        />
+
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 3 }}>
           <AnimatedSection>
             <Typography
               variant="h1"
@@ -101,12 +145,24 @@ export default function ContactPage() {
                 textAlign: 'center',
                 mb: 2,
                 fontWeight: 700,
-                fontSize: { xs: '2.5rem', md: '3.5rem' },
+                fontSize: { xs: '2.5rem', md: '3.5rem', lg: '4rem' },
                 fontFamily: 'var(--font-poppins)',
+                color: '#ffffff',
+                textShadow: '0 4px 30px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.3)',
               }}
             >
               Contact Us
             </Typography>
+            <Box
+              sx={{
+                width: '80px',
+                height: '4px',
+                background: 'linear-gradient(135deg, #ffffff 0%, #4FC3F7 100%)',
+                mx: 'auto',
+                mb: 3,
+                borderRadius: '2px',
+              }}
+            />
             <Typography
               variant="h6"
               sx={{
@@ -114,8 +170,11 @@ export default function ContactPage() {
                 maxWidth: '700px',
                 mx: 'auto',
                 fontWeight: 400,
-                opacity: 0.95,
+                fontSize: { xs: '1rem', md: '1.25rem' },
                 fontFamily: 'var(--font-inter)',
+                color: '#ffffff',
+                opacity: 0.95,
+                textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
               }}
             >
               Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
@@ -185,7 +244,7 @@ export default function ContactPage() {
                         Phone
                       </Typography>
                       <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'var(--font-inter)' }}>
-                        +91 98765 43210
+                        +91 95605 33557
                       </Typography>
                     </Box>
                   </Box>

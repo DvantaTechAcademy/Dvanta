@@ -25,3 +25,4 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children, delay = 0 }
 export default AnimatedSection;
 
 
+

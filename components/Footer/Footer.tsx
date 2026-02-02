@@ -38,34 +38,31 @@ const Footer: React.FC = () => {
           left: 0,
           right: 0,
           height: '1px',
-          background: 'linear-gradient(90deg, transparent, #ff6b00, transparent)',
+          background: 'linear-gradient(90deg, transparent, #4FC3F7, transparent)',
         },
       }}
     >
       <Container maxWidth="xl">
         <Grid container spacing={4}>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <Typography 
-                variant="h5" 
-                sx={{ 
-                  color: '#fff', 
-                  mb: 2, 
-                  fontWeight: 700,
-                  fontFamily: 'var(--font-poppins)',
-                  background: 'linear-gradient(135deg, #fff 0%, #ff6b00 100%)',
-                  backgroundClip: 'text',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
+              <Box
+                component="img"
+                src="/logo.png"
+                alt="DVANTA Infotech"
+                sx={{
+                  height: { xs: 50, md: 60 },
+                  width: 'auto',
+                  objectFit: 'contain',
+                  maxWidth: { xs: 200, md: 250 },
+                  mb: 2,
                 }}
-              >
-                DVANTA IT Academy
-              </Typography>
+              />
               <Typography 
                 variant="body2" 
                 sx={{ 
@@ -75,9 +72,7 @@ const Footer: React.FC = () => {
                   fontSize: '0.95rem',
                 }}
               >
-                DVANTA IT Academy is an industry-driven training institute
-                focused on architect-level thinking, real-world projects,
-                and building confident, job-ready software professionals.
+                DVANTA Infotech is your trusted IT partner delivering innovative solutions that drive growth and success. We combine technical expertise with business acumen to transform your digital landscape.
               </Typography>
             </motion.div>
           </Grid>
@@ -101,10 +96,10 @@ const Footer: React.FC = () => {
                 Quick Links
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                {['Home', 'Courses', 'Roadmap', 'Internship', 'Reviews', 'About', 'Contact'].map((link, idx) => (
+                {['Home', 'About', 'Services', 'Contact'].map((link) => (
                   <Link
                     key={link}
-                    href={link === 'Home' ? '/' : link === 'Reviews' ? '/reviews' : `/${link.toLowerCase()}`}
+                    href={link === 'Home' ? '/' : `/${link.toLowerCase()}`}
                     sx={{
                       color: '#bbb',
                       textDecoration: 'none',
@@ -115,7 +110,7 @@ const Footer: React.FC = () => {
                       gap: 0.5,
                       transition: 'all 0.3s ease',
                       '&:hover': {
-                        color: '#ff6b00',
+                        color: '#4FC3F7',
                         transform: 'translateX(4px)',
                         '& .arrow-icon': {
                           opacity: 1,
@@ -156,40 +151,40 @@ const Footer: React.FC = () => {
                   fontFamily: 'var(--font-poppins)',
                 }}
               >
-                Our Programs
+                Our Services
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                 {[
-                  'Java Full Stack',
-                  'Python & Data Science',
-                  'Web Development',
-                  'AI / ML Foundation',
-                  'DevOps Fundamentals',
-                  'Generative AI',
-                ].map((program) => (
+                  'Custom Software Development',
+                  'Cloud Solutions',
+                  'Mobile App Development',
+                  'IT Consulting & Architecture',
+                  'Data Analytics & Automation',
+                  'UI/UX & Product Design',
+                ].map((service) => (
                   <Typography
-                    key={program}
+                    key={service}
                     variant="body2"
                     sx={{
                       color: '#bbb',
                       fontFamily: 'var(--font-inter)',
-                      fontSize: '0.95rem',
+                      fontSize: '0.9rem',
                       transition: 'all 0.3s ease',
                       cursor: 'pointer',
                       '&:hover': {
-                        color: '#ff6b00',
+                        color: '#4FC3F7',
                         transform: 'translateX(4px)',
                       },
                     }}
                   >
-                    • {program}
+                    • {service}
                   </Typography>
                 ))}
               </Box>
             </motion.div>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} sm={6} md={4}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -211,7 +206,7 @@ const Footer: React.FC = () => {
                 <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>
                   <LocationOn 
                     sx={{ 
-                      color: '#ff6b00', 
+                      color: '#4FC3F7', 
                       fontSize: 22,
                       mt: 0.5,
                     }} 
@@ -231,7 +226,7 @@ const Footer: React.FC = () => {
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
                   <Phone 
                     sx={{ 
-                      color: '#ff6b00', 
+                      color: '#4FC3F7', 
                       fontSize: 22,
                     }} 
                   />
@@ -243,13 +238,13 @@ const Footer: React.FC = () => {
                       fontSize: '0.95rem',
                     }}
                   >
-                    +91 98765 43210
+                    +91 95605 33557
                   </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
                   <Email 
                     sx={{ 
-                      color: '#ff6b00', 
+                      color: '#4FC3F7', 
                       fontSize: 22,
                     }} 
                   />
@@ -278,10 +273,10 @@ const Footer: React.FC = () => {
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         color: '#fff',
-                        backgroundColor: '#ff6b00',
-                        borderColor: '#ff6b00',
+                        backgroundColor: '#4FC3F7',
+                        borderColor: '#4FC3F7',
                         transform: 'translateY(-2px)',
-                        boxShadow: '0 4px 12px rgba(255, 107, 0, 0.3)',
+                        boxShadow: '0 4px 12px rgba(79, 195, 247, 0.3)',
                       },
                     }}
                   >
@@ -300,10 +295,10 @@ const Footer: React.FC = () => {
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         color: '#fff',
-                        backgroundColor: '#ff6b00',
-                        borderColor: '#ff6b00',
+                        backgroundColor: '#4FC3F7',
+                        borderColor: '#4FC3F7',
                         transform: 'translateY(-2px)',
-                        boxShadow: '0 4px 12px rgba(255, 107, 0, 0.3)',
+                        boxShadow: '0 4px 12px rgba(79, 195, 247, 0.3)',
                       },
                     }}
                   >
@@ -330,7 +325,7 @@ const Footer: React.FC = () => {
               fontSize: '0.9rem',
             }}
           >
-            © {new Date().getFullYear()} DVANTA IT Academy. All Rights Reserved.
+            © {new Date().getFullYear()} DVANTA Infotech. All Rights Reserved.
           </Typography>
         </Box>
       </Container>
